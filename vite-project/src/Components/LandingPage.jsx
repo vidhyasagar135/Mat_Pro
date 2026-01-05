@@ -1,5 +1,8 @@
 import Image1 from "../assets/Image1.png";
 import Image1Frame from "../assets/Image1Frame.png";
+import top1 from "../assets/t1.png";
+import top2 from "../assets/t2.png";
+import cimg from "../assets/c.png";
 
 const LandingPage = () => {
   const scrollToContact = () => {
@@ -9,11 +12,12 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#761B0F] flex items-center justify-center">
+    <div className="bg-[#761B0F] w-full overflow-hidden">
 
-      <div className="relative w-[90%] max-w-6xl">
+      {/* ================= DESKTOP / WEB VIEW ================= */}
+      <div className="relative w-[90%] max-w-6xl mx-auto hidden md:block py-10">
 
-        {/* Frame Border */}
+        {/* Frame */}
         <img
           src={Image1Frame}
           alt="Frame"
@@ -25,10 +29,10 @@ const LandingPage = () => {
           <img
             src={Image1}
             alt="Landing Content"
-            className="w-full h-auto rounded-md"
+            className="w-full h-auto rounded-md block"
           />
 
-          {/* BUTTON */}
+          {/* Desktop Button */}
           <button
             onClick={scrollToContact}
             className="
@@ -48,6 +52,31 @@ const LandingPage = () => {
             FIND YOUR LIFE PARTNER
           </button>
         </div>
+      </div>
+
+      {/* ================= MOBILE VIEW ================= */}
+      <div className="md:hidden w-full px-6 pt-4 space-y-4">
+
+        {/* Top Heading */}
+        <img
+          src={top1}
+          alt="Only App for Traditional Marriages"
+          className="mx-auto w-[90%] block"
+        />
+
+        {/* Sub Heading */}
+        <img
+          src={top2}
+          alt="Largest and Most Successful"
+          className="mx-auto w-[85%] block"
+        />
+
+        {/* Couple Image (space removed) */}
+        <img
+          src={cimg}
+          alt="Couple"
+          className="mx-auto w-full block -mb-0"
+        />
 
       </div>
     </div>
