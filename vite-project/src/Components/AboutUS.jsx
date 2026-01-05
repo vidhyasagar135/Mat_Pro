@@ -98,10 +98,12 @@ const AboutUS = () => {
 
         <div className="relative z-10 flex items-center justify-center w-full px-6">
           <img
-            src={ss}
-            alt="Our Success Stories"
-            className="w-full max-w-6xl h-auto object-contain"
-          />
+  src={ss}
+  alt="Our Success Stories"
+  className="w-full max-w-none md:w-[120%] lg:w-[140%] h-auto object-contain"
+/>
+
+
         </div>
       </section>
     </>
