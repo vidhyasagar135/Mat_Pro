@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import NavLogo from "../assets/Nav.png";
 
-const Navbar = () => {
+const NavBar = () => {
   const navigate = useNavigate();
 
   return (
@@ -36,4 +36,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
