@@ -26,10 +26,19 @@ const LandingPage = () => {
 
         {/* Content */}
         <div className="relative z-10 p-10">
+          
+          {/* 🔥 IMAGE MOVED DOWN & RIGHT (WEB ONLY) */}
           <img
             src={Image1}
             alt="Landing Content"
-            className="w-full h-auto rounded-md block"
+            className="
+              w-full 
+              h-auto 
+              rounded-md 
+              block
+              md:translate-x-12
+              md:translate-y-4
+            "
           />
 
           {/* Desktop Button */}
@@ -57,27 +66,23 @@ const LandingPage = () => {
       {/* ================= MOBILE VIEW ================= */}
       <div className="md:hidden w-full px-6 pt-4 space-y-4">
 
-        {/* Top Heading */}
         <img
           src={top1}
           alt="Only App for Traditional Marriages"
           className="mx-auto w-[90%] block"
         />
 
-        {/* Sub Heading */}
         <img
           src={top2}
           alt="Largest and Most Successful"
           className="mx-auto w-[85%] block"
         />
 
-        {/* Couple Image (space removed) */}
         <img
           src={cimg}
           alt="Couple"
-          className="mx-auto w-full block -mb-0"
+          className="mx-auto w-full block"
         />
-
       </div>
     </div>
   );
