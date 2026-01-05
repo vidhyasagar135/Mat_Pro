@@ -1,19 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import NavLogo from "../assets/Nav.png";
+import NavLogo from "../assets/MainLogo.png";
 
 const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="w-full bg-[#761B0F] px-6 py-4 flex items-center justify-between">
+    <nav className="w-full bg-[#761B0F] px-10 py-4 flex items-center justify-between">
       
       {/* Left */}
-      <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate("/")}>
-        <img src={NavLogo} alt="Logo" className="w-10 h-10 object-contain" />
-        <h1 className="text-white text-2xl font-serif font-semibold">
-          Telugu <br /> Matchmakers
-        </h1>
+      <div
+        className="flex items-center cursor-pointer ml-6"
+        onClick={() => navigate("/")}
+      >
+        <img
+          src={NavLogo}
+          alt="Logo"
+          className="w-50 h-auto object-contain"
+        />
       </div>
 
       {/* Right */}
