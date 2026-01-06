@@ -20,11 +20,9 @@ const Footer = () => {
       {/* ================= WEB VERSION ================= */}
       <div className="hidden md:block relative w-full h-[80vh]">
 
-        <img
-          src={tleftdesign}
-          alt="Top Left Design"
-          className="pointer-events-none absolute top-0 left-0 w-[450px] opacity-90 z-30"
-        />
+       <img src={tleftdesign} alt="Top Left Design" className="pointer-events-none absolute top-[0%] left-[5.1%] w-[35%] max-w-[465px] opacity-100 drop-shadow-2xl z-30" />
+
+
 
         <img
           src={bottomrightdesign}

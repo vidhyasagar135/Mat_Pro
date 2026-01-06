@@ -1,5 +1,6 @@
 import LpImage from "../assets/LpImage.png";
 import TpDesign from "../assets/tpdesign.png";
+import webbt from "../assets/btleft.png";
 import br from "../assets/Decor2-Yellow.png";
 import tf from "../assets/tpdesign.png";
 import llp1 from "../assets/lp2_1.png";
@@ -13,16 +14,13 @@ const LandingPage2 = () => {
     <>
       {/* ================= DESKTOP / WEB VIEW ================= */}
       <div className="relative h-[70vh] bg-[#FFE4C4] overflow-hidden hidden md:flex items-center justify-center">
-        <img
-          src={TpDesign}
-          alt="Top Right Design"
-          className="absolute top-0 right-0 w-72 lg:w-96 opacity-80 pointer-events-none"
-        />
+        <img src={TpDesign} alt="Top Right Design" className="absolute top-0 right-2 w-[260px] sm:w-[320px] md:w-[400px] lg:w-[520px] opacity-100 z-20 pointer-events-none"/>
+
 
         <img
-          src={TpDesign}
+          src={webbt}
           alt="Bottom Left Design"
-          className="absolute bottom-0 left-0 w-72 lg:w-96 opacity-80 rotate-180 pointer-events-none"
+          className="absolute bottom-0 left-0 w-[320px]  sm:w-[380px] md:w-[450px] lg:w-[550px] opacity-100 z-20 pointer-events-none"
         />
 
         <img
