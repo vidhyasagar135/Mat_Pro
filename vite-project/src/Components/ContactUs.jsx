@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import cu from "../assets/Contactus.png";
-import  bottomright from "../assets/brdes.png";
+import decors from "../assets/Decor1-Yellow.png";
+import decors2 from "../assets/Decor2-Yellow.png";
+
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
   const [caste, setCaste] = useState("");
@@ -19,8 +21,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section id="contact-us" className="relative w-full min-h-screen">
-
+    <section id="contact-us" className="relative w-full min-h-screen overflow-hidden">
       {/* Background */}
       <img
         src={cu}
@@ -29,13 +30,40 @@ const ContactUs = () => {
       />
       <div className="absolute inset-0 bg-black/40" />
 
+      {/* MOBILE DECORS */}
+      <img
+        src={decors}
+        alt="Decor Top Left"
+        className="
+          absolute
+          md:hidden
+          top-[0%]
+          left-[0%]
+          w-[200px]
+          pointer-events-none
+          z-0
+        "
+      />
+
+      <img
+        src={decors2}
+        alt="Decor Bottom Right"
+        className="
+          absolute
+          md:hidden
+          -bottom-[0%]
+          -right-[0%]
+          w-[200px]
+          pointer-events-none
+          z-0
+        "
+      />
+
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
-
         {/* ================= FORM ================= */}
         {!submitted && (
           <div className="w-full max-w-md rounded-3xl bg-[#fde8dc] p-8 shadow-2xl">
-
             {/* Heading */}
             <div className="text-center mb-6">
               <p className="text-[#7a2a14] text-lg font-serif">
@@ -51,7 +79,6 @@ const ContactUs = () => {
             </div>
 
             <form className="space-y-4" onSubmit={handleSubmit}>
-
               {/* Name */}
               <div>
                 <label className="block text-sm text-[#7a2a14] mb-1 font-serif">
@@ -60,6 +87,7 @@ const ContactUs = () => {
                 <input
                   type="text"
                   required
+                  placeholder="Enter Your Name"
                   className="w-full rounded-xl border border-[#e3c2b3] px-4 py-3 focus:outline-none"
                 />
               </div>
@@ -102,9 +130,7 @@ const ContactUs = () => {
                   <option value="kamma">Kamma</option>
                 </select>
 
-                {error && (
-                  <p className="mt-1 text-sm text-red-600">{error}</p>
-                )}
+                {error && <p className="mt-1 text-sm text-red-600">{error}</p>}
               </div>
 
               {/* Submit */}
@@ -121,7 +147,6 @@ const ContactUs = () => {
         {/* ================= SUCCESS ================= */}
         {submitted && (
           <div className="w-full max-w-md rounded-3xl bg-[#fde8dc] p-10 shadow-2xl text-center">
-
             <div className="flex justify-center mb-4">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-500">
                 <svg
@@ -161,7 +186,6 @@ const ContactUs = () => {
             </button>
           </div>
         )}
-
       </div>
     </section>
   );
