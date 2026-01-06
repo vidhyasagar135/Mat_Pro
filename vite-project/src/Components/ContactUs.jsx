@@ -29,27 +29,27 @@ const ContactUs = () => {
       <img
         src={decors}
         alt="Decor Top Right"
-        className="hidden md:block pointer-events-none absolute top-[0%] right-[0%] w-[35%] max-w-[577px] opacity-90 z-0"
+        className="hidden md:block pointer-events-none absolute top-[0%] right-[0%] w-[35%] max-w-144.25 opacity-90 z-0"
       />
 
       {/* BOTTOM LEFT */}
       <img
         src={decors2}
         alt="Decor Bottom Left"
-        className="hidden md:block pointer-events-none absolute bottom-[0%] left-[5%] w-[35%] max-w-[480px] opacity-90 z-0"
+        className="hidden md:block pointer-events-none absolute bottom-[0%] left-[5%] w-[35%] max-w-120 opacity-90 z-0"
       />
 
       {/* ================= MOBILE DECORS ================= */}
       <img
         src={decors}
         alt="Decor Top Left"
-        className="absolute md:hidden top-[0%] left-[0%] w-[200px] pointer-events-none z-0"
+        className="absolute md:hidden top-[0%] left-[0%] w-50 pointer-events-none z-0"
       />
 
       <img
         src={decors2}
         alt="Decor Bottom Right"
-        className="absolute md:hidden bottom-[0%] right-[0%] w-[200px] pointer-events-none z-0"
+        className="absolute md:hidden bottom-[0%] right-[0%] w-50 pointer-events-none z-0"
       />
 
       {/* ================= CONTENT ================= */}
