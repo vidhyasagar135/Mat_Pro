@@ -15,7 +15,7 @@ const LandingPage = () => {
     <div className="bg-[#761B0F] w-full overflow-hidden">
 
       {/* ================= DESKTOP / WEB VIEW ================= */}
-      <div className="relative w-[90%] max-w-6xl mx-auto hidden md:block py-10">
+      <div className="relative w-[90%] max-w-6xl mx-auto hidden md:block pt-4 pb-0">
 
         {/* Frame */}
         <img
@@ -36,8 +36,8 @@ const LandingPage = () => {
               h-auto 
               rounded-md 
               block
-              md:translate-x-12
-              md:translate-y-4
+              md:translate-x-10
+              md:translate-y-10
             "
           />
 

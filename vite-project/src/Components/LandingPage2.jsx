@@ -11,7 +11,7 @@ const LandingPage2 = () => {
   return (
     <>
       {/* ================= DESKTOP / WEB VIEW ================= */}
-      <div className="relative h-[80vh] bg-[#FFE4C4] overflow-hidden hidden md:flex items-center justify-center">
+      <div className="relative h-[70vh] bg-[#FFE4C4] overflow-hidden hidden md:flex items-center justify-center">
 
 
         <img
@@ -26,11 +26,8 @@ const LandingPage2 = () => {
           className="absolute bottom-0 left-0 w-72 lg:w-96 opacity-80 rotate-180 pointer-events-none"
         />
 
-        <img
-          src={LpImage}
-          alt="Landing Content"
-          className="w-[60%] lg:w-[55%] h-auto block relative z-10"
-        />
+       <img src={LpImage} alt="Landing Content" className="w-[60%] lg:w-[55%] h-auto block relative z-10 -mt-28" />
+
       </div>
 
       {/* ================= MOBILE VIEW ================= */}
