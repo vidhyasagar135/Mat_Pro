@@ -5,7 +5,7 @@ import ci from "../assets/ContactNow.png";
 import ss from "../assets/ss.png";
 import at from "../assets/Aboutthis.png"; 
 import at2 from "../assets/Aboutthis2.png";
-import at3 from "../assets/bp.png"; // mobile contact image
+import at3 from "../assets/bp.png";
 
 const AboutUS = () => {
   return (
@@ -14,18 +14,37 @@ const AboutUS = () => {
       <section className="relative w-full bg-[#761B0F] overflow-hidden">
 
         {/* ---------- DESKTOP / TABLET ---------- */}
-        <div className="hidden md:flex min-h-screen items-center justify-center">
+        <div className="hidden md:flex h-[80vh] items-center justify-center relative">
 
+          {/* TOP LEFT DESIGN (FIXED) */}
           <img
             src={TpDesign}
             alt="Top Left Design"
-            className="absolute top-0 left-0 w-72 opacity-60 pointer-events-none"
+            className="
+              pointer-events-none
+              absolute
+              -top-24
+              -left-24
+              w-[420px]
+              opacity-80
+              z-0
+            "
           />
 
+          {/* BOTTOM RIGHT DESIGN */}
           <img
             src={TpDesign}
             alt="Bottom Right Design"
-            className="absolute bottom-0 right-0 w-72 opacity-60 rotate-180 pointer-events-none"
+            className="
+              pointer-events-none
+              absolute
+              -bottom-24
+              -right-24
+              w-[420px]
+              opacity-80
+              rotate-180
+              z-0
+            "
           />
 
           <div className="relative z-10 flex items-center justify-center w-full px-6">
@@ -48,18 +67,37 @@ const AboutUS = () => {
       <section className="relative w-full bg-[#FFE4C4] overflow-hidden">
 
         {/* ---------- DESKTOP / TABLET ---------- */}
-        <div className="hidden md:flex min-h-screen items-center justify-center">
+        <div className="hidden md:flex h-[80vh] items-center justify-center relative">
 
+          {/* TOP LEFT DESIGN (CONSISTENT) */}
           <img
             src={TpDesign}
-            alt="Top Right Design"
-            className="absolute top-0 right-0 w-80 opacity-80 pointer-events-none"
+            alt="Top Left Design"
+            className="
+              pointer-events-none
+              absolute
+              -top-24
+              -left-24
+              w-[420px]
+              opacity-80
+              z-0
+            "
           />
 
+          {/* BOTTOM RIGHT DESIGN */}
           <img
             src={TpDesign}
-            alt="Bottom Left Design"
-            className="absolute bottom-0 left-0 w-80 opacity-80 rotate-180 pointer-events-none"
+            alt="Bottom Right Design"
+            className="
+              pointer-events-none
+              absolute
+              -bottom-24
+              -right-24
+              w-[420px]
+              opacity-80
+              rotate-180
+              z-0
+            "
           />
 
           <div className="relative z-10 flex items-center justify-center w-full px-6">
@@ -82,30 +120,34 @@ const AboutUS = () => {
       </section>
 
       {/* ================= SUCCESS STORIES SECTION ================= */}
-      <section className="relative w-full bg-[#761B0F] overflow-hidden flex items-center justify-center py-12">
+      <section className="relative w-full bg-[#761B0F] overflow-hidden flex items-center justify-center h-[70vh]">
 
-        <img
-          src={TpDesign}
-          alt="Top Left Design"
-          className="pointer-events-none absolute -top-24 -left-24 w-[420px] opacity-40"
-        />
+  {/* TOP LEFT – PERFECT CORNER */}
+  <img
+    src={TpDesign}
+    alt="Top Left Design"
+    className="pointer-events-none absolute top-2 left-2 w-[450px] opacity-90 z-30"
+  />
 
-        <img
-          src={TpDesign}
-          alt="Bottom Right Design"
-          className="pointer-events-none absolute -bottom-24 -right-24 w-[420px] opacity-40 rotate-180"
-        />
+  {/* BOTTOM RIGHT – PERFECT CORNER */}
+  <img
+    src={TpDesign}
+    alt="Bottom Right Design"
+    className="pointer-events-none absolute bottom-0 right-0 w-[450px] opacity-90 rotate-180 z-30"
+  />
 
-        <div className="relative z-10 flex items-center justify-center w-full px-6">
-          <img
-  src={ss}
-  alt="Our Success Stories"
-  className="w-full max-w-none md:w-[120%] lg:w-[140%] h-auto object-contain"
-/>
+  {/* MAIN IMAGE – ZOOMED OUT */}
+  <div className="relative z-10 flex items-center justify-center w-full px-6">
+    <img
+      src={ss}
+      alt="Our Success Stories"
+      className="w-[90%] md:w-[100%] lg:w-[110%] h-auto object-contain"
+    />
+  </div>
+
+</section>
 
 
-        </div>
-      </section>
     </>
   );
 };

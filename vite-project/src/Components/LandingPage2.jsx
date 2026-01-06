@@ -11,7 +11,8 @@ const LandingPage2 = () => {
   return (
     <>
       {/* ================= DESKTOP / WEB VIEW ================= */}
-      <div className="relative min-h-screen bg-[#FFE4C4] overflow-hidden hidden md:flex items-center justify-center">
+      <div className="relative h-[80vh] bg-[#FFE4C4] overflow-hidden hidden md:flex items-center justify-center">
+
 
         <img
           src={TpDesign}

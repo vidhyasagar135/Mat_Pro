@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cu from "../assets/Contactus.png";
-
+import  bottomright from "../assets/brdes.png";
 const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
   const [caste, setCaste] = useState("");
