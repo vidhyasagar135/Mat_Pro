@@ -12,7 +12,7 @@ import mv_heading_ss from "../assets/mv_ss.png";
 import mv_ss from "../assets/mv_review.png";
 import decors from "../assets/Decor1-Yellow.png";
 import decors2 from "../assets/Decor2-Yellow.png";
-import news from "../assets/newss.png";
+import news from "../assets/Newss.png";
 const AboutUS = () => {
   return (
     <>
