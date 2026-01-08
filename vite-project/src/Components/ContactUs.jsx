@@ -24,39 +24,18 @@ const ContactUs = () => {
       <img src={cu} alt="Contact Us Background" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* ================= WEB DECORS ================= */}
-      {/* TOP RIGHT */}
-      <img
-        src={decors}
-        alt="Decor Top Right"
-        className="hidden md:block pointer-events-none absolute top-[0%] right-[0%] w-[35%] max-w-144.25 opacity-90 z-0"
-      />
+      {/* WEB DECORS */}
+      <img src={decors} className="hidden md:block absolute top-0 right-0 w-[35%] opacity-90" />
+      <img src={decors2} className="hidden md:block absolute bottom-0 left-[5%] w-[35%] opacity-90" />
 
-      {/* BOTTOM LEFT */}
-      <img
-        src={decors2}
-        alt="Decor Bottom Left"
-        className="hidden md:block pointer-events-none absolute bottom-[0%] left-[5%] w-[35%] max-w-120 opacity-90 z-0"
-      />
+      {/* MOBILE DECORS */}
+      <img src={decors} className="md:hidden absolute top-0 left-0 w-48" />
+      <img src={decors2} className="md:hidden absolute bottom-0 right-0 w-48" />
 
-      {/* ================= MOBILE DECORS ================= */}
-      <img
-        src={decors}
-        alt="Decor Top Left"
-        className="absolute md:hidden top-[0%] left-[0%] w-50 pointer-events-none z-0"
-      />
-
-      <img
-        src={decors2}
-        alt="Decor Bottom Right"
-        className="absolute md:hidden bottom-[0%] right-[0%] w-50 pointer-events-none z-0"
-      />
-
-      {/* ================= CONTENT ================= */}
+      {/* CONTENT */}
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
         {!submitted && (
           <div className="w-full max-w-md rounded-3xl bg-[#fde8dc] p-8 shadow-2xl">
-            {/* Heading */}
             <div className="text-center mb-6">
               <p className="text-[#7a2a14] text-lg font-serif">
                 Ready to find your soulmate?
@@ -107,15 +86,24 @@ const ContactUs = () => {
           </div>
         )}
 
+        {/* ✅ SUCCESS STATE */}
         {submitted && (
           <div className="w-full max-w-md rounded-3xl bg-[#fde8dc] p-10 shadow-2xl text-center">
+            {/* GREEN CHECK ICON */}
+            
+
             <h3 className="text-2xl font-serif font-semibold text-[#7a2a14] mb-3">
               Successfully Submitted
             </h3>
+            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+              <span className="text-4xl text-green-600 font-bold">✓</span>
+            </div>
+
             <p className="text-[#7a2a14] mb-6">
               Thank you for enrolling.
               <br />Our team will contact you shortly.
             </p>
+
             <button
               onClick={() => {
                 setSubmitted(false);
