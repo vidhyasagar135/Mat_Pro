@@ -90,14 +90,13 @@ const ContactUs = () => {
         {submitted && (
           <div className="w-full max-w-md rounded-3xl bg-[#fde8dc] p-10 shadow-2xl text-center">
             {/* GREEN CHECK ICON */}
-            
+            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+              <span className="text-4xl text-green-600 font-bold">✓</span>
+            </div>
 
             <h3 className="text-2xl font-serif font-semibold text-[#7a2a14] mb-3">
               Successfully Submitted
             </h3>
-            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
-              <span className="text-4xl text-green-600 font-bold">✓</span>
-            </div>
 
             <p className="text-[#7a2a14] mb-6">
               Thank you for enrolling.

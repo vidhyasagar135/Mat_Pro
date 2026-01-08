@@ -63,7 +63,7 @@ const Footer = () => {
           />
 
           {/* LIGHT SECTION */}
-          <div className="bg-[#f6e1d3] pt-10 pb-24"> 
+          <div className="bg-[#f6e1d3] pt-10 pb-17"> 
             <div className="flex justify-center px-4"> 
               <img src={FooterImage} alt="Footer" className="w-full h-auto" />
             </div> 
