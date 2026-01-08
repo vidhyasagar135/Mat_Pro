@@ -1,6 +1,9 @@
 import React, { useState, useRef } from "react";
 import pu from "../assets/pu.png";
 import FormBorder from "../assets/FormBorder.png";
+import tpright from "../assets/tpdesign.png";
+import bleft from "../assets/btleft.png";
+import bgright from "../assets/Decor2-Yellow.png";
 
 const Partner = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -17,8 +20,16 @@ const Partner = () => {
 
   return (
     <>
-      {/* Top Image Section */}
+      {/* ================= TOP IMAGE SECTION ================= */}
       <section className="relative w-full h-[90vh] bg-[#761B0F] overflow-hidden flex flex-col items-center justify-center px-8 md:px-16 lg:px-24">
+        
+        {/* BOTTOM RIGHT DECOR (TOP SECTION ONLY) */}
+        <img
+          src={bgright}
+          alt="Bottom Right Decor"
+          className="hidden md:block absolute bottom-0 right-1 w-124 opacity-90 pointer-events-none"
+        />
+
         <img
           src={pu}
           alt="Partner Section"
@@ -33,18 +44,41 @@ const Partner = () => {
         </button>
       </section>
 
-      {/* Partner Form Section */}
+      {/* ================= PARTNER FORM SECTION ================= */}
       <section
         ref={formRef}
-        className="relative w-full py-20 px-4 md:px-8 lg:px-16 bg-[#F6E2D3] overflow-hidden"
+        className="relative w-full py-28 md:py-32 lg:py-40 px-4 md:px-8 lg:px-16 bg-[#F6E2D3] overflow-hidden"
       >
-        {/* Decorative Borders */}
-        <img src={FormBorder} className="absolute top-6 left-95 w-24 opacity-80" />
-        <img src={FormBorder} className="absolute top-6 right-95 w-24 rotate-90 opacity-80" />
-        <img src={FormBorder} className="absolute bottom-6 left-95 w-24 -rotate-90 opacity-80" />
-        <img src={FormBorder} className="absolute bottom-6 right-95 w-24 rotate-180 opacity-80" />
+        {/* Section Decors */}
+        <img
+          src={tpright}
+          className="hidden md:block absolute top-0 right-5 w-120 opacity-90 pointer-events-none"
+        />
+        <img
+          src={bleft}
+          className="hidden md:block absolute bottom-0 left-18.5 w-117 opacity-90 pointer-events-none"
+        />
 
+        {/* FORM CONTAINER */}
         <div className="relative max-w-3xl mx-auto">
+          {/* ===== FORM BORDERS (CLOSE TO FORM) ===== */}
+          <img
+            src={FormBorder}
+            className="hidden md:block absolute -top-6 -left-6 w-20 opacity-80"
+          />
+          <img
+            src={FormBorder}
+            className="hidden md:block absolute -top-6 -right-6 w-20 rotate-90 opacity-80"
+          />
+          <img
+            src={FormBorder}
+            className="hidden md:block absolute -bottom-6 -left-6 w-20 -rotate-90 opacity-80"
+          />
+          <img
+            src={FormBorder}
+            className="hidden md:block absolute -bottom-6 -right-6 w-20 rotate-180 opacity-80"
+          />
+
           <p className="text-center text-[#8B2E1C] text-sm font-medium mb-1">
             Join Hands to Grow With Purpose and Preserve Sacred Traditions
           </p>
@@ -56,22 +90,41 @@ const Partner = () => {
           {/* FORM */}
           <form
             onSubmit={handleSubmit}
-            className="grid grid-cols-1 md:grid-cols-2 gap-5"
+            className="grid grid-cols-1 md:grid-cols-2 gap-5 md:scale-80 md:origin-center"
           >
             <div className="md:col-span-2">
-              <label className="text-xs font-medium text-[#6A1C12]">Name</label>
-              <input required className="mt-1 w-full px-4 py-2.5 rounded-full border" />
+              <label className="text-base font-semibold text-[#6A1C12]">
+                Name
+              </label>
+              <input
+                required
+                className="mt-2 w-full px-6 py-3.5 rounded-full border text-lg"
+              />
             </div>
 
             <div>
-              <label className="text-xs font-medium text-[#6A1C12]">Phone</label>
-              <input type="tel" required className="mt-1 w-full px-4 py-2.5 rounded-full border" />
+              <label className="text-base font-semibold text-[#6A1C12]">
+                Phone
+              </label>
+              <input
+                type="tel"
+                required
+                className="mt-2 w-full px-6 py-3.5 rounded-full border text-lg"
+              />
             </div>
 
             <div>
-              <label className="text-xs font-medium text-[#6A1C12]">Profiles</label>
-              <select required defaultValue="" className="mt-1 w-full px-4 py-2.5 rounded-full border">
-                <option value="" disabled>Select profiles range</option>
+              <label className="text-base font-semibold text-[#6A1C12]">
+                Profiles
+              </label>
+              <select
+                required
+                defaultValue=""
+                className="mt-2 w-full px-6 py-3.5 rounded-full border text-lg"
+              >
+                <option value="" disabled>
+                  Select profiles range
+                </option>
                 <option>1 – 50</option>
                 <option>50 – 100</option>
                 <option>100+</option>
@@ -79,23 +132,38 @@ const Partner = () => {
             </div>
 
             <div>
-              <label className="text-xs font-medium text-[#6A1C12]">Gender</label>
-              <select required defaultValue="" className="mt-1 w-full px-4 py-2.5 rounded-full border">
-                <option value="" disabled>Select Gender</option>
+              <label className="text-base font-semibold text-[#6A1C12]">
+                Gender
+              </label>
+              <select
+                required
+                defaultValue=""
+                className="mt-2 w-full px-6 py-3.5 rounded-full border text-lg"
+              >
+                <option value="" disabled>
+                  Select Gender
+                </option>
                 <option>Male</option>
                 <option>Female</option>
               </select>
             </div>
 
             <div>
-              <label className="text-xs font-medium text-[#6A1C12]">City</label>
-              <input required className="mt-1 w-full px-4 py-2.5 rounded-full border" />
+              <label className="text-base font-semibold text-[#6A1C12]">
+                City
+              </label>
+              <input
+                required
+                className="mt-2 w-full px-6 py-3.5 rounded-full border text-lg"
+              />
             </div>
 
-            <div className="md:col-span-2 mt-5">
+            <div className="md:col-span-2 mt-7">
               <button
                 type="submit"
-                className="w-full bg-[#E08A24] hover:bg-[#d17b1f] text-white font-semibold py-3 rounded-full"
+                className="w-full bg-[#E08A24] hover:bg-[#d17b1f]
+                           text-white text-xl font-semibold
+                           py-4 rounded-full"
               >
                 SCHEDULE A CALL
               </button>
@@ -104,7 +172,7 @@ const Partner = () => {
         </div>
       </section>
 
-      {/* SUCCESS POPUP */}
+      {/* ================= SUCCESS POPUP ================= */}
       {showPopup && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
           <div className="bg-[#FCE5D4] rounded-[28px] px-10 py-8 w-[90%] max-w-md text-center shadow-2xl">

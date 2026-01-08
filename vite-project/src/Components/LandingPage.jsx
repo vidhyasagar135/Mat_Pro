@@ -19,10 +19,13 @@ const LandingPage = () => {
 
         {/* Frame */}
         <img
-          src={Image1Frame}
-          alt="Frame"
-          className="absolute inset-0 w-full h-full object-contain pointer-events-none"
-        />
+  src={Image1Frame}
+  alt="Frame"
+  className="absolute top-7 left-0 w-full h-full object-contain
+             scale-90 pointer-events-none"
+/>
+
+
 
         {/* Content */}
         <div className="relative z-10 p-10">
@@ -36,7 +39,7 @@ const LandingPage = () => {
               h-auto 
               rounded-md 
               block
-              md:translate-x-10
+              md:translate-x-9
               md:translate-y-10
             "
           />
