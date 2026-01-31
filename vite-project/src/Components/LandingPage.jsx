@@ -18,12 +18,7 @@ const LandingPage = () => {
       <div className="relative w-[90%] max-w-6xl mx-auto hidden md:block pt-4 pb-0">
 
         {/* Frame */}
-        <img
-  src={Image1Frame}
-  alt="Frame"
-  className="absolute top-7 left-0 w-full h-full object-contain
-             scale-90 pointer-events-none"
-/>
+        <img src={Image1Frame} alt="Frame" className="absolute top-7 left-0 w-full h-full object-contain scale-90 pointer-events-none"/>
 
 
 

@@ -21,7 +21,7 @@ const Footer = () => {
           <img
             src={tleftdesign}
             alt="Top Left Design"
-            className="pointer-events-none absolute top-[0%] left-[5.1%] w-[35%] max-w-[465px] opacity-100 drop-shadow-2xl z-30"
+            className="pointer-events-none absolute top-[0%] left-[5.1%] w-[35%] max-w-[510px] opacity-100 drop-shadow-2xl z-30"
           />
 
           <img
@@ -59,7 +59,7 @@ const Footer = () => {
           <img
             src={tpright}
             alt="Top Right Design"
-            className="absolute top-0 right-0 w-[200px] pointer-events-none z-0"
+            className="absolute top-0 right-1 w-[187px] pointer-events-none z-0"
           />
 
           {/* LIGHT SECTION */}

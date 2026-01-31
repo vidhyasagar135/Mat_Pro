@@ -2,6 +2,7 @@ import LpImage from "../assets/LpImage.png";
 import TpDesign from "../assets/tpdesign.png";
 import webbt from "../assets/btleft.png";
 import br from "../assets/Decor2-Yellow.png";
+
 import llp1 from "../assets/lp2_1.png";
 import llp2 from "../assets/lp2_2.png";
 import llp3 from "../assets/lp2_3.png";
@@ -14,21 +15,21 @@ const LandingPage2 = () => {
       {/* ================= DESKTOP / WEB VIEW ================= */}
       <div className="relative h-[70vh] bg-[#FFE4C4] overflow-hidden hidden md:flex items-center justify-center">
 
-        {/* Top Design */}
+        {/* Top Right Design */}
         <img
           src={TpDesign}
           alt="Top Right Design"
-          className="absolute top-0 right-2 w-[520px] z-20 pointer-events-none"
+          className="absolute top-0 right-2 w-[520px] z-20 pointer-events-none select-none"
         />
 
-        {/* Bottom Design */}
+        {/* Bottom Left Design */}
         <img
           src={webbt}
           alt="Bottom Left Design"
-          className="absolute bottom-0 left-0 w-[550px] z-20 pointer-events-none"
+          className="absolute bottom-0 left-0 w-[550px] z-20 pointer-events-none select-none"
         />
 
-        {/* IMAGE + NUMBERING WRAPPER */}
+        {/* IMAGE + NUMBERING */}
         <div className="relative w-[60%] lg:w-[55%] -mt-28 z-10">
 
           {/* Main Image */}
@@ -39,44 +40,45 @@ const LandingPage2 = () => {
           />
 
           {/* NUMBERING — WEB ONLY */}
-          <div className="hidden md:flex absolute top-15 left-1/2 -translate-x-1/2 gap-40 z-30">
-
-
-            <div className="w-11 h-11 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold text-lg shadow-md">
-              1
-            </div>
-
-            <div className="w-11 h-11 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold text-lg shadow-md">
-              2
-            </div>
-
-            <div className="w-11 h-11 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold text-lg shadow-md">
-              3
-            </div>
-
-            <div className="w-11 h-11 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold text-lg shadow-md">
-              4
-            </div>
-
+          <div className="hidden md:flex absolute top-16 left-1/2 -translate-x-1/2 gap-40 z-30">
+            {[1, 2, 3, 4].map((num) => (
+              <div
+                key={num}
+                className="w-11 h-11 bg-yellow-400 text-black rounded-full flex items-center justify-center font-bold text-lg shadow-md"
+              >
+                {num}
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* ================= MOBILE VIEW ================= */}
-      <div className="relative md:hidden bg-[#FFE4C4] w-full px-4 pt-6 pb-24 space-y-6 overflow-hidden">
+      <div className="relative md:hidden bg-[#FFE4C4] w-full px-4 pt-6 pb-18 space-y-6 overflow-hidden">
 
         {/* Mobile Top Design */}
         <img
           src={TpDesign}
           alt="Top Left Design"
-          className="absolute top-0 left-1 w-[160px] pointer-events-none"
+          className="absolute top-0 left-1 w-[160px] pointer-events-none select-none"
         />
 
-        {/* Mobile Bottom Design */}
+        {/* ✅ FIXED Mobile Bottom Right Decor */}
         <img
           src={br}
           alt="Decor Bottom Right"
-          className="absolute -bottom-2 right-0 w-[180px] pointer-events-none"
+          className="
+            absolute
+            bottom-0
+            right-0
+            w-[220px]
+            max-w-none
+            object-contain
+            translate-x-6
+            translate-y-6
+            pointer-events-none
+            select-none
+          "
         />
 
         {/* Mobile Content */}
@@ -85,7 +87,6 @@ const LandingPage2 = () => {
         <img src={llp3} alt="Section 3" className="w-[92%] mx-auto block relative z-10" />
         <img src={llp4} alt="Section 4" className="w-[92%] mx-auto block relative z-10" />
         <img src={llp5} alt="Section 5" className="w-[92%] mx-auto block relative z-10" />
-
       </div>
     </>
   );

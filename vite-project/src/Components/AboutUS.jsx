@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+/* ===== IMAGES ===== */
 import AboutUsImage from "../assets/Aboutus.png";
 import TpDesign from "../assets/tpdesign.png";
 import bldesign from "../assets/btleft.png";
@@ -52,46 +53,93 @@ const AboutUS = () => {
     <>
       {/* ================= ABOUT US ================= */}
       <section className="relative w-full bg-[#761B0F] overflow-hidden">
+        {/* WEB */}
         <div className="hidden md:flex h-[80vh] items-center justify-center relative">
-          <img src={decors} className="absolute top-0 left-0 w-[40%]" />
-          <img src={decors2} className="absolute bottom-0 right-0 w-[38%]" />
-          <img src={AboutUsImage} className="relative z-10 w-[80%]" />
+          <img
+            src={decors}
+            className="absolute top-0 left-0 w-[37.2%]"
+            alt=""
+          />
+          <img
+            src={decors2}
+            className="absolute bottom-0 right-0 w-[38%]"
+            alt=""
+          />
+          <img src={AboutUsImage} className="relative z-10 w-[80%]" alt="" />
         </div>
 
-        <div className="md:hidden px-6 py-8">
-          <img src={at} className="w-[92%] mx-auto mb-4" />
-          <img src={at2} className="w-[92%] mx-auto" />
-        </div>
+        {/* MOBILE */}
+        {/* MOBILE */}
+       <div className="relative md:hidden px-6 py-8 overflow-hidden">
+  <img src={decors} alt="Top Right Decor" className="absolute top-0 right-0 w-[187px] " />
+  <img src={decors2} alt="Bottom Left Decor" className="absolute bottom-0 left-0 w-[180px] " />
+  <img src={at} className="relative z-10 w-[92%] mx-auto mb-4" alt="" />
+  <img src={at2} className="relative z-10 w-[92%] mx-auto" alt="" />
+</div>
+
       </section>
 
       {/* ================= CONTACT ================= */}
       <section className="relative w-full bg-[#FFE4C4] overflow-hidden">
+        {/* WEB */}
         <div className="hidden md:flex h-[80vh] items-center justify-center relative">
-          <img src={TpDesign} className="absolute top-0 right-0 w-[40%]" />
-          <img src={bldesign} className="absolute bottom-0 left-0 w-[38%]" />
-          <img src={ci} className="relative z-10 w-[70%]" />
+          <img
+            src={TpDesign}
+            className="absolute top-0 right-4 w-[37%]"
+            alt=""
+          />
+          <img
+            src={bldesign}
+            className="absolute bottom-0 left-0 w-[38%]"
+            alt=""
+          />
+          <img src={ci} className="relative z-10 w-[70%]" alt="" />
         </div>
 
-        <div className="md:hidden px-4 py-8">
-          <img src={at3} className="w-[92%] mx-auto" />
-        </div>
+        {/* MOBILE */}
+        <div className="relative md:hidden px-4 py-8 overflow-hidden">
+  <img src={TpDesign} alt="Top Decor" className="absolute top-0 left-0 w-[175px]" />
+  <img src={bldesign} alt="Bottom Decor" className="absolute bottom-0 left-0 w-[252px] " />
+  <img src={at3} className="relative z-10 w-[92%] mx-auto" alt="" />
+</div>
+
       </section>
 
       {/* ================= SUCCESS STORIES ================= */}
       <section className="relative w-full bg-[#761B0F] overflow-hidden">
-        {/* ===== WEB & MOBILE TEXT SLIDER ===== */}
         <div className="flex items-center justify-center h-[70vh] relative">
-          <img src={decors} className="absolute top-0 left-0 w-[420px] md:w-[520px]" />
-          <img src={decors2} className="absolute bottom-0 right-0 w-[420px] md:w-[520px]" />
+          {/* ===== WEB DECORS ===== */}
+          <img
+            src={decors}
+            className="hidden md:block absolute top-0 left-1 w-[584px]"
+            alt=""
+          />
+          <img
+            src={decors2}
+            className="hidden md:block absolute bottom-0 right-0 w-[520px]"
+            alt=""
+          />
 
+          {/* ===== MOBILE DECORS ===== */}
+          <img
+            src={decors}
+            className="md:hidden absolute top-0 left-0 w-[260px]"
+            alt=""
+          />
+          <img
+            src={decors2}
+            className="md:hidden absolute bottom-0 right-0 w-[260px]"
+            alt=""
+          />
+
+          {/* ===== CONTENT ===== */}
           <div className="relative z-10 w-[90%] md:w-[60%] text-center">
-            {/* HEADING */}
             <img
               src={mv_heading_ss}
               className="mx-auto mb-8 md:mb-10 w-[75%] md:w-[45%]"
+              alt=""
             />
 
-            {/* FIXED HEIGHT REVIEW AREA */}
             <div className="relative h-[240px] md:h-[230px] overflow-hidden flex items-center justify-center">
               <div key={current} className="absolute w-full animate-slideRTL">
                 <p className="text-[#F5E6D3] text-lg md:text-xl leading-relaxed font-serif line-clamp-4">
@@ -126,7 +174,6 @@ export default AboutUS;
 // import mv_ss2 from "../assets/ss2.png";
 // import mv_ss3 from "../assets/ss2.png";
 
-
 // import decors from "../assets/Decor1-Yellow.png";
 // import decors2 from "../assets/Decor2-Yellow.png";
 // import news from "../assets/Newss.png";
@@ -137,7 +184,7 @@ export default AboutUS;
 //       <section className="relative w-full bg-[#761B0F] overflow-hidden">
 //         {/* DESKTOP / TABLET */}
 //         <div className="hidden md:flex h-[80vh] items-center justify-center relative">
-//           {/* TOP LEFT */} 
+//           {/* TOP LEFT */}
 //           <img
 //             src={decors}
 //             alt="Top Left Decor"
@@ -193,7 +240,7 @@ export default AboutUS;
 //             src={bldesign}
 //             alt="Bottom Left Design"
 //             className="pointer-events-none absolute bottom-[0%] left-[0%] w-[38%] max-w-[555px] opacity-90 z-0"
-//           /> 
+//           />
 
 //           <div className="relative z-10 flex items-center justify-center w-full px-6">
 //             <img

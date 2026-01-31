@@ -25,12 +25,12 @@ const ContactUs = () => {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* WEB DECORS */}
-      <img src={decors} className="hidden md:block absolute top-0 right-0 w-[35%] opacity-90" />
+      <img src={decors} className="hidden md:block absolute top-0 right-0 w-[34.2%] opacity-70" />
       <img src={decors2} className="hidden md:block absolute bottom-0 left-[5%] w-[35%] opacity-90" />
 
       {/* MOBILE DECORS */}
-      <img src={decors} className="md:hidden absolute top-0 left-0 w-48" />
-      <img src={decors2} className="md:hidden absolute bottom-0 right-0 w-48" />
+      <img src={decors} className="md:hidden absolute top-0 right-0 w-65" /> 
+      <img src={decors2} className="md:hidden absolute bottom-0 right-0 w-48" /> 
 
       {/* CONTENT */}
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
